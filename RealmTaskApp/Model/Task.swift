@@ -15,4 +15,4 @@ class Task: Object {
     @objc dynamic var date = Date()
     @objc dynamic var isComplete = false
     
-}
+}//End

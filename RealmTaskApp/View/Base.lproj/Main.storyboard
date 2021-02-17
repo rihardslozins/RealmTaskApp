@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mn4-tV-zvq" kind="show" id="sUI-PA-kpa"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,18 +61,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="mn4-tV-zvq" kind="show" id="a7C-Gl-TXS"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aij-XQ-cEy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="95.758928571428569"/>
         </scene>
-        <!--Individual Tasks Table View Controller-->
+        <!--Individual Task Table View Controller-->
         <scene sceneID="94n-Mm-npH">
             <objects>
-                <tableViewController id="mn4-tV-zvq" customClass="IndividualTasksTableViewController" customModule="RealmTaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mn4-tV-zvq" customClass="IndividualTaskTableViewController" customModule="RealmTaskApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0RM-wy-TA4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,8 +107,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="E0W-fA-8Da">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="Gxw-bo-Zmr"/>
-                            <barButtonItem systemItem="edit" id="gac-de-8wN"/>
+                            <barButtonItem systemItem="add" id="Gxw-bo-Zmr">
+                                <connections>
+                                    <action selector="addItemTapped:" destination="mn4-tV-zvq" id="69d-zx-1cO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="gac-de-8wN">
+                                <connections>
+                                    <action selector="editItemTapped:" destination="mn4-tV-zvq" id="Hlc-oC-r4Z"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
